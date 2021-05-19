@@ -2,6 +2,7 @@
 
 ## 
 ```
+local yaml_dump = require "yaml-dump"
 local yaml_str = yaml_dump {
         upstreams = etcd_upstreams.node.nodes
     } .. yaml_dump {
