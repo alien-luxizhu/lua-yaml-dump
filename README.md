@@ -12,3 +12,11 @@ local yaml_str = yaml_dump {
     print(yaml_str)
 
 ```
+
+## 将apisix etcd数据导出到本地文件apisix.yaml
+```
+init_worker_by_lua_block {
+    apisix.http_init_worker()
+    require("apisix.own.config-etcd-backup").init_worker()
+}
+```
